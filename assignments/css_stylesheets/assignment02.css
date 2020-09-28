@@ -8,7 +8,7 @@ nav{
   font-size: 20px;
   padding: 5px;
   background-color: springgreen;
-  z-index: 1;
+  z-index: 5;
 }
 div{
   margin-bottom: 50px;
