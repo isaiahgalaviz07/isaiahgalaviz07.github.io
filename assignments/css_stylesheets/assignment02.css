@@ -29,11 +29,13 @@ span{
   position:relative;
   bottom: 150px;
   right: 50px;
+  z-index: 1;
 }
 #bird{
   position:relative;
   top: 195px;
   left: 250px;
+  z-index: 1;
 }
 .classy{
   margin-left: 10px;
