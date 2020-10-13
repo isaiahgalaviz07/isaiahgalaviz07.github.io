@@ -33,6 +33,13 @@ elem[2].children[4].children[1].onclick = function(){
   sub1(elem[2], elem[19]);
   tag = true;
 };
+elem[2].children[4].children[2].onclick = function(){
+  clear1(elem[2], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[3].children[4].children[0].onclick = function(){
   add1(elem[3], elem[19], tag);
   tag = true;
@@ -40,6 +47,13 @@ elem[3].children[4].children[0].onclick = function(){
 elem[3].children[4].children[1].onclick = function(){
   sub1(elem[3], elem[19]);
   tag = true;
+};
+elem[3].children[4].children[2].onclick = function(){
+  clear1(elem[3], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 elem[4].children[4].children[0].onclick = function(){
   add1(elem[4], elem[19], tag);
@@ -49,6 +63,13 @@ elem[4].children[4].children[1].onclick = function(){
   sub1(elem[4], elem[19]);
   tag = true;
 };
+elem[4].children[4].children[2].onclick = function(){
+  clear1(elem[4], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[5].children[4].children[0].onclick = function(){
   add1(elem[5], elem[19], tag);
   tag = true;
@@ -56,6 +77,13 @@ elem[5].children[4].children[0].onclick = function(){
 elem[5].children[4].children[1].onclick = function(){
   sub1(elem[5], elem[19]);
   tag = true;
+};
+elem[5].children[4].children[2].onclick = function(){
+  clear1(elem[5], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 elem[6].children[4].children[0].onclick = function(){
   add1(elem[6], elem[19], tag);
@@ -65,6 +93,13 @@ elem[6].children[4].children[1].onclick = function(){
   sub1(elem[6], elem[19]);
   tag = true;
 };
+elem[6].children[4].children[2].onclick = function(){
+  clear1(elem[6], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[7].children[4].children[0].onclick = function(){
   add1(elem[7], elem[19], tag);
   tag = true;
@@ -72,6 +107,13 @@ elem[7].children[4].children[0].onclick = function(){
 elem[7].children[4].children[1].onclick = function(){
   sub1(elem[7], elem[19]);
   tag = true;
+};
+elem[7].children[4].children[2].onclick = function(){
+  clear1(elem[7], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 elem[8].children[4].children[0].onclick = function(){
   add1(elem[8], elem[19], tag);
@@ -81,6 +123,13 @@ elem[8].children[4].children[1].onclick = function(){
   sub1(elem[8], elem[19]);
   tag = true;
 };
+elem[8].children[4].children[2].onclick = function(){
+  clear1(elem[8], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[9].children[4].children[0].onclick = function(){
   add1(elem[9], elem[19], tag);
   tag = true;
@@ -88,6 +137,13 @@ elem[9].children[4].children[0].onclick = function(){
 elem[9].children[4].children[1].onclick = function(){
   sub1(elem[9], elem[19]);
   tag = true;
+};
+elem[9].children[4].children[2].onclick = function(){
+  clear1(elem[9], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 elem[10].children[4].children[0].onclick = function(){
   add1(elem[10], elem[19], tag);
@@ -97,6 +153,13 @@ elem[10].children[4].children[1].onclick = function(){
   sub1(elem[10], elem[19]);
   tag = true;
 };
+elem[10].children[4].children[2].onclick = function(){
+  clear1(elem[10], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[11].children[4].children[0].onclick = function(){
   add1(elem[11], elem[19], tag);
   tag = true;
@@ -104,6 +167,13 @@ elem[11].children[4].children[0].onclick = function(){
 elem[11].children[4].children[1].onclick = function(){
   sub1(elem[11], elem[19]);
   tag = true;
+};
+elem[11].children[4].children[2].onclick = function(){
+  clear1(elem[11], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 elem[12].children[4].children[0].onclick = function(){
   add1(elem[12], elem[19], tag);
@@ -113,6 +183,13 @@ elem[12].children[4].children[1].onclick = function(){
   sub1(elem[12], elem[19]);
   tag = true;
 };
+elem[12].children[4].children[2].onclick = function(){
+  clear1(elem[12], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[13].children[4].children[0].onclick = function(){
   add1(elem[13], elem[19], tag);
   tag = true;
@@ -120,6 +197,13 @@ elem[13].children[4].children[0].onclick = function(){
 elem[13].children[4].children[1].onclick = function(){
   sub1(elem[13], elem[19]);
   tag = true;
+};
+elem[13].children[4].children[2].onclick = function(){
+  clear1(elem[13], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 elem[14].children[4].children[0].onclick = function(){
   add1(elem[14], elem[19], tag);
@@ -129,6 +213,13 @@ elem[14].children[4].children[1].onclick = function(){
   sub1(elem[14], elem[19]);
   tag = true;
 };
+elem[14].children[4].children[2].onclick = function(){
+  clear1(elem[14], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[15].children[4].children[0].onclick = function(){
   add1(elem[15], elem[19], tag);
   tag = true;
@@ -136,6 +227,13 @@ elem[15].children[4].children[0].onclick = function(){
 elem[15].children[4].children[1].onclick = function(){
   sub1(elem[15], elem[19]);
   tag = true;
+};
+elem[15].children[4].children[2].onclick = function(){
+  clear1(elem[15], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 elem[16].children[4].children[0].onclick = function(){
   add1(elem[16], elem[19], tag);
@@ -145,6 +243,13 @@ elem[16].children[4].children[1].onclick = function(){
   sub1(elem[16], elem[19]);
   tag = true;
 };
+elem[16].children[4].children[2].onclick = function(){
+  clear1(elem[16], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[17].children[4].children[0].onclick = function(){
   add1(elem[17], elem[19], tag);
   tag = true;
@@ -153,6 +258,13 @@ elem[17].children[4].children[1].onclick = function(){
   sub1(elem[17], elem[19]);
   tag = true;
 };
+elem[17].children[4].children[2].onclick = function(){
+  clear1(elem[17], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
+};
 elem[18].children[4].children[0].onclick = function(){
   add1(elem[18], elem[19], tag);
   tag = true;
@@ -160,6 +272,13 @@ elem[18].children[4].children[0].onclick = function(){
 elem[18].children[4].children[1].onclick = function(){
   sub1(elem[18], elem[19]);
   tag = true;
+};
+elem[18].children[4].children[2].onclick = function(){
+  clear1(elem[18], elem[19]);
+  if(elem[19].children[2].innerHTML == 0 && elem[19].children[3].innerHTML == 0) 
+    tag = false;
+  else
+    tag = true;
 };
 
 // create an "add1" function
