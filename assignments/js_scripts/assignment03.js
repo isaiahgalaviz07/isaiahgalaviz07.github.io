@@ -406,6 +406,7 @@ function clear1 (elem, totals) {
             subCount++;
           }
           currentTOver = currentTOver + subCount;
+		  totals.children[3].innerHTML = currentTOver;
       }
       else {
           currentTOver = currentTOver - subOver;
