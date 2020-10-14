@@ -402,7 +402,7 @@ function clear1 (elem, totals) {
       elem.children[3].innerHTML = "-";
       let currentTOver = Number.parseInt(totals.children[3].innerHTML);
       if(subOver < 0) {
-          var subCount;
+          var subCount = 0;
           for (var x = 0; x > subOver; x--){
             subCount++;
           }
