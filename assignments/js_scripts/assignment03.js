@@ -398,6 +398,7 @@ function clear1 (elem, totals) {
   }
   if (elem.children[3].innerHTML != "-") {
       let subOver = elem.children[3].innerHTML
+		console.log(subOver);
       elem.children[3].innerHTML = "-";
       let currentTOver = Number.parseInt(totals.children[3].innerHTML);
       if(subOver < 0) {
@@ -405,6 +406,8 @@ function clear1 (elem, totals) {
           for (var x = 0; x > subOver; x--){
             subCount++;
           }
+		  console.log(subCount);
+		  console.log(currentTOver);
           currentTOver = currentTOver + subCount;
 		  totals.children[3].innerHTML = currentTOver;
       }
