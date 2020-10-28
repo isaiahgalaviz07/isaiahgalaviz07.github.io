@@ -34,7 +34,7 @@ function loadClubDistances() {
 	if (localStorage.getItem("clubs")) {
 		clubs = JSON.parse(localStorage.getItem("clubs"));
 	}
-	// otherwise create new "clubs" array, using resetAllClubs()
+	// otherwise create new "clubs" array, using resetAllClubDistances()
 	else {
 		clubs = resetAllClubDistances();
 		clubs = JSON.parse(localStorage.getItem("clubs"));
@@ -92,6 +92,8 @@ function displayClubDistanceEntryForm(c) {
 // replace the current "clubs" array with the previous one
 function undoLastShot() {
         // your code here !
+	clubs = JSON.parse(localStorage.getItem("clubsUndo"));
+	return clubs;
 }
 
 // create a new (default) "clubs" array
