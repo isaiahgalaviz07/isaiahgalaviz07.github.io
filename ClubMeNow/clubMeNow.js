@@ -94,8 +94,8 @@ function undoLastShot() {
 	if (localStorage.getItem("clubsUndo")) {
 		let str = JSON.parse(localStorage.getItem("clubs"));
 		let clubs = JSON.parse(localStorage.getItem("clubsUndo"));
+		localStorage.setItem("clubs", clubs);
 		localStorage.setItem("clubsUndo", str);
-		return clubs;
 	}	
 }
 
