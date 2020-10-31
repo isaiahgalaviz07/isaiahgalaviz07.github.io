@@ -93,11 +93,11 @@ function displayClubDistanceEntryForm(c) {
 function undoLastShot() {
 	if (localStorage.getItem("clubsUndo")) {
 		let oldClubs = localStorage.getItem("clubs");
-		let clubs = JSON.parse(localStorage.getItem("clubsUndo"));
+		let newClubs = localStorage.getItem("clubsUndo");
+		localStorage.setItem("clubs", newClubs);
 		localStorage.setItem("clubsUndo", oldClubs);
-		localStorage.setItem("clubs", JSON.stringify(clubs));
-		return clubs;
 	}	
+	window.location.href = "clubDistanceList.html"; 
 }
 
 // create a new (default) "clubs" array
