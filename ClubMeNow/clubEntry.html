@@ -47,13 +47,13 @@
 	let clubRow = parseInt(localStorage.getItem('club'));
 	// retrieve the "clubs" array
 	let clubs = JSON.parse(localStorage.getItem('clubs'));
+	// display the full clubName of the user-chosen club
+	let newClubName = document.getElementById('clubName');
+	let newClubDistances = clubs[clubs.length];
 	
 	function addClub() {
 		clubs = JSON.parse(localStorage.getItem('clubs'));
 		clubs[clubs.length] = clubs[clubs.length - 1];
-		// display the full clubName of the user-chosen club
-		let newClubName = document.getElementById('clubName');
-		let newClubDistances = clubs[clubs.length];
 		let str = JSON.stringify(clubs)
 		localStorage.setItem("clubs", str);
 	}
