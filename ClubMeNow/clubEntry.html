@@ -47,12 +47,11 @@
 	let clubRow = parseInt(localStorage.getItem('club'));
 	// retrieve the "clubs" array
 	let clubs = JSON.parse(localStorage.getItem('clubs'));
-	// display the full clubName of the user-chosen club
+	clubs[clubs.length] = clubs[clubs.length - 1];
 	let newClubDistances = 0; 
 	
 	function addClub() {
 		let newClubName = document.getElementById('clubName')
-		clubs[clubs.length] = clubs[clubs.length - 1];
 		clubs[(clubs.length) - 1][0] = "New";
 		clubs[(clubs.length) - 1][1] = newClubName;
 		for(let i = 3; i < 7, i++)
