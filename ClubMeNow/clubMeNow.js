@@ -84,7 +84,7 @@ function displayClubEntry() {
 	if(clubs.length < 14)
 		window.location.href = "clubEntry.html"; 
 	else
-		alert("Warning: \nyou are only allowed to carry 14 clubs in your golf bag in match play competition."");
+		alert("Warning: \nyou are only allowed to carry 14 clubs in your golf bag in match play competition.");
 }
 
 // navigate to "Distance Entry" screen (from one of the club "+" buttons)
