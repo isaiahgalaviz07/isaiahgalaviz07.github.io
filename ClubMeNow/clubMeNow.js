@@ -80,6 +80,7 @@ function appendTableRows() {
 
 // navigate to "club ENTRY" screen (enter a new club, not a distance)
 function displayClubEntry() {
+	let clubs = JSON.parse(localStorage.getItem("clubs"));
 	if(clubs.length < 14)
 		window.location.href = "clubEntry.html"; 
 	else
