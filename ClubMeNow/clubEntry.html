@@ -48,10 +48,15 @@
 	let clubs = JSON.parse(localStorage.getItem('clubs'));
 	
 	function addClub() {
-		let clubs = JSON.parse(localStorage.getItem('clubs'));
-		clubs[clubs.length] = clubs[clubs.length - 1];
-		let str = JSON.stringify(clubs)
-		localStorage.setItem("clubs", str);
+	
+		if(clubs.length < 15) {
+			let clubs = JSON.parse(localStorage.getItem('clubs'));
+			clubs[clubs.length] = clubs[clubs.length - 1];
+			let str = JSON.stringify(clubs)
+			localStorage.setItem("clubs", str);
+		}
+		else
+			alert("Warning: \nyou are only allowed to carry 14 clubs in your golf bag in match play competition."");
 	}
 	
 	// navigate to club distance LIST screen
