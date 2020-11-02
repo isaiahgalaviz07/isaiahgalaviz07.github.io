@@ -55,12 +55,13 @@
 		clubs = JSON.parse(localStorage.getItem('clubs'));
 		clubs[clubs.length] = clubs[clubs.length - 1];
 		newClubName = document.getElementById('clubName')
-		clubs[clubs.length][0] = "New";
-		clubs[clubs.length][1] = newClubName;
+		clubs[clubs.length - 1][0] = "New";
+		clubs[clubs.length - 1][1] = newClubName;
 		for(let i = 3; i < 7, i++)
 			clubs[clubs.length - 1][i] = newClubDistances;
 		let str = JSON.stringify(clubs)
 		localStorage.setItem("clubs", str);
+		updateStats();
 	}
 	
 	// navigate to club distance LIST screen
