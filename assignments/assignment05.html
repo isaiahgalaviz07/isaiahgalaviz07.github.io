@@ -112,7 +112,11 @@
 							newConfirmedOver1000.push({ 
 							"Slug": c.Slug, 
 							"NewConfirmed": c.NewConfirmed, 
-							"NewDeaths": c.NewDeaths
+							"NewDeaths": c.NewDeaths, 
+							"TotalConfirmed": c.TotalConfirmed,
+							"TotalDeaths": c.TotalDeaths
+							"Population": populations[c.Slug],
+							"TotalConfirmed100000": 100000 * c.TotalConfirmed / populations[c.Slug]
 							});
 						}
 					}
