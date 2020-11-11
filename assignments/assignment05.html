@@ -20,10 +20,10 @@
 <body>
 
 
-	<h2>Example Chart using Chart.js</h2>
+	<h2>Chart using Chart.js</h2>
 	<canvas id="myChart"></canvas>
 
-	<h2>Example AJAX call to Covid19api</h2>
+	<h2>AJAX call to Covid19api</h2>
 	<button type="button" onclick="loadContent()">Load Covid-19 Content</button>
 
 	<!-- Custom JS -->
@@ -40,8 +40,7 @@
 		// AJAX variable
 		var xhttp;
 		
-		// Chart.js variables
-		
+		// --------------- Chart.js Variables -------------
 		// modified from : https://www.sitepoint.com/introduction-chart-js-2-0-six-examples/
 		// "ctx" is the canvas HTML element where the chart is rendered in the browser
 		var ctx = document.getElementById('myChart').getContext('2d');
@@ -106,14 +105,45 @@
 		// the AJAX call responds, that is, it might execute before the 
 		// variable, covidJson, is initialized with data from the API.
 		function loadContent() {
-			xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 
-					&& this.status == 200) {
-      
-					covidJson = this.responseText;
-					covidJsObj = JSON.parse(covidJson);
-					newConfirmedOver1000 = [];
+			
+			let today = dayjs().format("MM-DD-YYYY");
+			let yesterday = today.diff(1000 * 60 * 60 * 24);
+			if( !localStorage.getItem("date") 
+				|| localStorage.getItem("date") < yesterday ) {
+			
+				xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 
+						&& this.status == 200) {
+		  
+						covidJson = this.responseText;
+						covidJsObj = JSON.parse(covidJson);
+						localStorage.setItem("json", covidJson);
+						
+						buildChart();
+
+					} // end if (this.readyState == 4...
+					
+				}; // end xhttp.onreadystatechange = function()
+				
+				xhttp.open("GET", URL, true);
+				xhttp.send();
+				
+			} // end if( !localStorage.getItem("date")
+		    else {
+			  covidJson = localStorage.getItem("json");
+			  covidJsObj = JSON.parse(covidJson);
+			  buildChart();
+			  console.log('no ajax call');
+			}
+			
+		} // end function loadContent() 
+		
+		
+		// ---------- buildChart() function ----------
+		function buildChart(){
+			
+			newConfirmedOver1000 = [];
       
 					for (let c of covidJsObj.Countries) {
 						if (c.TotalDeaths > 50000) {
@@ -168,12 +198,8 @@
 						dayjs().format("MM-DD-YYYY") + ")" ;
 					
 					myChart = new Chart(ctx, chartData); 
-
-				} // end if
-			}; // end xhttp.onreadystatechange = function()
-			xhttp.open("GET", URL, true);
-			xhttp.send();
-		} // end function loadContent() 
+			
+		} // end function buildChart()
 		
 		// data from: 
 		// https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population
