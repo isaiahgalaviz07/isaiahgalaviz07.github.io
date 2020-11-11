@@ -2,9 +2,7 @@ h2 {
 	padding-left: 10px;
 	padding-top: 20px;
 }
-#myChart {
-	float: left;
-}
 button {
-	padding-left: 10px;
+	float: left;
+	padding: 50px;
 }
