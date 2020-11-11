@@ -118,10 +118,9 @@
 								"Population": populations[c.Slug],
 								"TotalConfirmed100000": 100000 * c.TotalConfirmed / populations[c.Slug]
 							});
+							_.orderBy(newConfirmedOver1000, ["TotalConfirmed100000"], ["desc"]);
 						}
 					}
-					
-					_.orderBy(newConfirmedOver1000, ["TotalConfirmed100000"], ["desc"]);
 
 					  chartData.data.datasets[0].backgroundColor 
 						= "rgba(100,100,100,0.4)"; // gray
@@ -141,7 +140,7 @@
 						  (x) => x.NewDeaths );
 					  chartData.options.title.text 
 						= "Covid 19 Hotspots (As of: " + 
-						dayjs().format("YYYY-MM-DD") + ")" ;
+						dayjs().format("MM-DD-YYYY") + ")" ;
 					myChart = new Chart(ctx, chartData); 
 
 				} // end if
