@@ -123,10 +123,12 @@
 								"Population": populations[c.Slug],
 								"TotalConfirmed100000": 100000 * c.TotalConfirmed / populations[c.Slug]
 							});
-							_.orderBy(newConfirmedOver1000, ["TotalConfirmed100000"], ["desc"]);
 						
 						}
 					}
+					
+					// Sort by TotalConfirmed100000 in descending order
+					_.orderBy(newConfirmedOver1000, ["TotalConfirmed100000"], ["desc"]);
 
 					// show 3 bars for TotalConfirmed, TotalDeaths, and TotalConfirmed100000,
 					// only for countries with AT LEAST 50,000 total deaths.
