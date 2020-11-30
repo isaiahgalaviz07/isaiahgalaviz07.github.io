@@ -144,7 +144,7 @@ let saveForm = () => {
 
 // Added angular code
 var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
+app.controller('myCtrl', function($scope) {  
   $scope.payments =[];
   $scope.populate = function () {
     updateForm();
@@ -171,6 +171,5 @@ app.controller('myCtrl', function($scope) {
       "amt": toMoney(0),
       "ye":toMoney(0)
     }
-    $(`#payments[10]`).css("background-color", "yellow");
   }
 });
