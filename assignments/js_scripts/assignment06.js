@@ -138,7 +138,7 @@ let saveForm = () => {
      loans = JSON.parse(localStorage.getItem(`as06`));
      updateForm();
   } else {
-     alert(`Error: no saved values`);
+     alert(`Error: There are no saved values.`);
   }
  }
 
